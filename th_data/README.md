@@ -4,7 +4,7 @@ This directory is used to download json files from the Hedera Community Town Hal
 
 ## Prerequisites
 
-- Python 3.x
+- Python 3.6 or greater 
 
 ## Create a python virtual environment in the directory
 
@@ -27,4 +27,3 @@ Next you will need to install all python dependencies
 Now that you should be able to run main.py
 
     python3 main.py
-
