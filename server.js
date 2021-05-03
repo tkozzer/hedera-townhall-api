@@ -1,18 +1,32 @@
 const express = require("express");
 const path = require("path");
-const livereload = require("livereload");
 const cors = require("cors");
-const connectLivereload = require("connect-livereload");
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 const server = express();
 
-// Hot reloading for development
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, "public"));
+
+var env = process.argv[2]
+if (env === "dev") {
+  // Is for development purposes
+  const connectLivereload = require("connect-livereload");
+  const livereload = require("livereload");
+
+  // Hot reloading for development
+  const liveReloadServer = livereload.createServer();
+  liveReloadServer.watch(path.join(__dirname, "public"));
+
+  //Middleware
+  server.use(connectLivereload());
+
+  liveReloadServer.server.once("connection", () => {
+    setTimeout(() => {
+      liveReloadServer.refresh("/");
+    }, 100);
+  });
+}
 
 // Middleware
-server.use(connectLivereload());
 server.use(cors());
 
 // Basic Frontend capabilities for informational use of API
@@ -32,10 +46,4 @@ server.use("/", info);
 
 server.listen(port, () => {
   console.log(`Server started on http://localhost:${port}`);
-});
-
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
 });
