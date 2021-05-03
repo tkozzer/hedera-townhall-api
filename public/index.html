@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hashgraph Archive</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="mt-5">Hashgraph Archive API</h1>
+                </div>
+                <div class="col">
+                    <button type="button" class="mt-5 btn btn-primary float-right" onclick="clearStorage()">Clear
+                        Storage and Page</button>
+                </div>
+            </div>
+
+            <hr>
+            <div class="container mb-5">
+                <h5 id="version"></h5>
+                <h5>Description</h5>
+                <p id="description">
+                </p>
+                <ul>
+                    <h5>Features Include:</h5>
+                    <li>Retrieve information on all videos in the Town Hall playlist
+                        <a href="/api/videos">/api/videos</a>
+                    </li>
+                    <br>
+                    <br>
+                    <li>Retrieve all chapters from all available videos
+                        <a href="/api/videos/chapters">/api/videos/chapters</a>
+                    </li>
+                    <br>
+                    <li>Retrieve all subtitles from all available videos
+                        <a href="/api/videos/subtitles">/api/videos/subtitles</a>
+                    </li>
+                    <br>
+                    <li>Retrieve all chapters and subtitles from all available videos
+                        <a href="/api/videos/all">/api/videos/all </a>
+                    </li>
+                    <br>
+                    <li>Retrieve <strong>general information</strong> on a specific video in the Town Hall playlist*
+                        <div class="container">
+                            <div class="row mt-2 mb-2" style="margin-left: -30px;">
+                                <div class="col-md">
+                                    <input class="form-control w-100" type="month" min="2020-04" id="video"
+                                        onchange="video()">
+                                </div>
+                                <div class="col-md mt-2">
+                                    <input class="form-check-input" type="checkbox" id="show-subtitles-video"
+                                        value="show-subs" onchange="video()">
+                                    <label class="form-check-label s-s-label" for="show-subtitles-video">Show
+                                        Subtitles</label>
+                                </div>
+                            </div>
+                        </div>
+                        <a id="video-api"></a>
+                    </li>
+                    <br>
+                    <li>Retrieve <strong>chapters</strong> of a specific video in the Town Hall playlist*
+                        <div class="container">
+                            <div class="row mt-2 mb-2" style="margin-left: -30px;">
+                                <div class="col-md">
+                                    <input class="form-control w-100" type="month" min="2020-04" id="chapters"
+                                        onchange="chapters()">
+                                </div>
+                                <div class="col-md mt-2">
+                                    <input class="form-check-input" type="checkbox" id="show-subtitles-chapters"
+                                        value="show-subs" onchange="chapters()">
+                                    <label class="form-check-label s-s-label" for="show-subtitles-chapters">Show
+                                        Subtitles</label>
+                                </div>
+                            </div>
+                        </div>
+                        <a id="chapters-api"></a>
+                    </li>
+                    <br>
+                    <li>Retrieve <strong>subtitles</strong> of a specific video in the Town Hall playlist*
+                        <br />
+                        <input class="form-control mb-2" type="month" min="2020-04" id="subtitles"
+                            onchange="subtitles()">
+                        <a id="subtitles-api"></a>
+                    </li>
+                    <br>
+                    <li>Provide a query to narrow down to a specific set of words or phrases
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <select id="type" class="custom-select w-100" onchange=" addType()">
+                                        <option disabled selected>Choose...</option>
+                                        <option value="chapters">Chapters</option>
+                                        <option value="subtitles">Subtitles</option>
+                                        <option value="all">All</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg s-s-div">
+                                    <input class="form-check-input" name="subtitles" type="radio" id="no-subtitles"
+                                        value="no-subs" onchange="addQuery()">
+                                    <label id="no-label" class="form-check-label" for="no-subtitles">No Subtitles</label>
+                                    <input class="form-check-input ml-4" name="subtitles" type="radio" id="show-subtitles"
+                                        value="show-subs" onchange="addQuery()">
+                                    <label id="show-label" class="form-check-label ml-5" for="show-subtitles">Show
+                                        Subtitles</label>
+                                    <br>
+                                    <input class="form-check-input" name="subtitles" type="radio" id="search-subtitles"
+                                        value="search-subs" onchange="addQuery()" disabled>
+                                    <label id="search-label" class="form-check-label" for="search-subtitles">Search
+                                        Subtitles</label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="Keyword Search" class="form-control" id="query"
+                            onkeydown="addQuery_Enter(this)" onkeyup="addQuery()">
+                        <br>
+                        <a id="query-api"></a>
+                        <p id="error"></p>
+                    </li>
+                    <br>
+                    <p><em>*note: There wasn't a town
+                            hall in
+                            December 2020</em></p>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <button type="button" class="mt-3 btn btn-primary float-right" onclick="clearStorage()">Clear
+                Storage and Page</button>
+        </div>
+        <hr>
+        <footer id="copyright" class="mb-5"></footer>
+        <script src="/main.js"></script>
+
+</html>

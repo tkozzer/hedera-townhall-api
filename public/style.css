@@ -1,0 +1,33 @@
+#subtitles {
+    width: 47.9%;
+  }
+  
+  label:hover {
+    background-color: rgb(248, 248, 248);
+    content: attr(title);
+  }
+  label {
+    transition-delay: -1s;
+  }
+  
+  @media only screen and (max-width: 990px) {
+    #subtitles {
+      width: 96%;
+    }
+    #show-subtitles-video,
+    #show-subtitles-chapters {
+      margin-left: 1px;
+    }
+    .s-s-label {
+      margin-left: 20px;
+    }
+  
+    .s-s-div {
+      margin-left: 10px;
+    }
+  }
+  
+  #type {
+    margin-left: -15px;
+  }
+  

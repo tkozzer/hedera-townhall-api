@@ -1,0 +1,27 @@
+00:00 - Intro
+01:23 - Are founders selling HBAR when the price is down?
+02:54 - Should town hall questions be selected democratically?
+06:37 - Is fairness preserved for batched transactions?
+16:34 - What happens if nodes choose not to upgrade?
+18:02 - Does current cash burn necessitate more coin sales?
+19:09 - How does Hedera support NFT crowdfunding?
+20:38 - Why was there a decrease in transactions in mid-April?
+22:24 - What is "controlled mutability"?
+26:10 - Can Hedera be forked once the patent expires?
+28:50 - Can Hedera use less energy than Visa, other networks? 
+29:44 - How will the network scale with the addition of permissionless nodes?
+32:04 - Is Hedera attractive for independent entrepreneurs? 
+33:54 - Can Hedera be used for cloud-like file storage?
+35:25 - Is Hedera on schedule with adding council members?
+35:52 - What is Hedera's theoretical throughput limit?
+38:59 - Will "everyone be using Hedera without knowing it"?
+41:12 - Can a failure in one shard spread to other shards?
+47:54 - What is the nature of Unibright's partnership?
+48:44 - Is a quantum internet a threat or a complement to Hedera?
+51:31 - Are central banks considering Hedera?
+51:57 - Will there be specialization amongst shards?
+52:56 - Is there a standard transaction fee for exchanges?
+53:38 - Is Hashgraph more limited by bandwidth or hardware?
+54:06 - How to get help when developing a dApp?
+54:35 - What will be the hardware requirements for running a node?
+55:52 - Wrap up
