@@ -136,8 +136,8 @@ function findAllChaptersAndSubtitles(req) {
   let all = new Array();
   for (let entry of db.entries) {
     if (
-      (keys.includes("show-subs") && paramObject.show_subtitles === "true") ||
-      (keys.includes("search-subs") && paramObject.search_subtitles === "true")
+      (keys.includes("show-subs") && paramObject["show-subs"] === "true") ||
+      (keys.includes("search-subs") && paramObject["search-subs"]=== "true")
     ) {
       all.push({
         id: entry.id,

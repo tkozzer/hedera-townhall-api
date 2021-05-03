@@ -33,8 +33,8 @@ function checkLocalStorage() {
     var is_show_subtitles_checked = localStorage.getItem("show-subtitles");
     var is_search_subtitles_checked = localStorage.getItem("search-subtitles");
 
-    if(query === ""){
-      document.getElementById("search-subtitles").disabled = false;
+    if(query === "" || query === null){
+      document.getElementById("search-subtitles").disabled = true;
     }
     if (type === null) {
       type = "Choose...";
@@ -152,7 +152,6 @@ function checkLocalStorage() {
       if (query === "") {
         document.getElementById("search-subtitles").disabled = true;
         document.getElementById("search-subtitles").checked = false;
-        
       }
       if (query.length !== 0) {
         link = link + `query=${query}`;
