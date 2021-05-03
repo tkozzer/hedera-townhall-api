@@ -1,5 +1,4 @@
-// const db = require("../th_data/db");
-const db = require("../th_data/test1");
+const db = require("../th_data/db");
 const { extractParams, extractType } = require("../utils/utils");
 const {
   getEntry,
