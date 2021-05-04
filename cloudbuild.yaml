@@ -1,1 +1,3 @@
-runtime: nodejs14 # or another supported version
+steps:
+  - name: 'ubuntu'
+    args: ['npm', 'start']
