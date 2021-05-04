@@ -120,3 +120,6 @@ temp/
 
 # Python environment
 th_data/th_data_env
+
+# Markdown config
+.markdownlint.json
