@@ -1,7 +1,7 @@
 {
   "name": "hedera-townhall-api",
   "version": "0.1.0",
-  "description": "An API to retrieve and search through Hedera Community Town Hall video's information including the questions (or chapters) and transcripts.",
+  "description": "An RESTful API to retrieve and search through Hedera Community Town Hall video's information including the questions (or chapters) and transcripts.",
   "main": "server.js",
   "scripts": {
     "start": "node server",

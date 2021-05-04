@@ -17,5 +17,3 @@ Now you will need to activate the python virtual environment
     source th_data_env/bin/activate
 
 You should now see (th_data_env) at the beginning of your command-line prompt
-
-

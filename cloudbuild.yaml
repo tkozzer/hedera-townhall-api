@@ -1,0 +1,5 @@
+steps:
+  - name: 'node'
+    args: ['npm', 'install']
+  - name: 'node'
+    args: ['npm', 'start']
