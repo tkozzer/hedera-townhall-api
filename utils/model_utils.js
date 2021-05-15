@@ -1,5 +1,5 @@
 // Helper Methods
-const utils = require("./utils")
+const utils = require("./utils");
 
 function getEntry(db, year, month, paramObject) {
   for (var entry of db.entries) {
@@ -54,6 +54,7 @@ function getRelevantChapters(entry, paramObject) {
   }
   return {
     id: entry.id,
+    title: entry.title,
     upload_date: entry.upload_date,
     chapters: chapters,
   };
