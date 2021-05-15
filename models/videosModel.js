@@ -47,6 +47,7 @@ function findAllChapters(req) {
     ) {
       all_chapters.push({
         id: entry.id,
+        title: entry.title,
         upload_date: entry.upload_date,
         chapters: entry.chapters,
       });
@@ -61,6 +62,7 @@ function findAllChapters(req) {
       }
       all_chapters.push({
         id: entry.id,
+        title: entry.title,
         upload_date: entry.upload_date,
         chapters: chapters_arr,
       });
@@ -94,6 +96,7 @@ function findAllSubtitles(req) {
   for (let entry of db.entries) {
     all_subtitles.push({
       id: entry.id,
+      title: entry.title,
       upload_date: entry.upload_date,
       subtitles: entry.subtitles,
     });
@@ -109,6 +112,7 @@ function findAllSubtitles(req) {
       if (answer.subtitles.length !== 0) {
         relevant_subtitles.push({
           id: entry.id,
+          title: entry.title,
           upload_date: entry.upload_date,
           subtitles: answer.subtitles,
         });
@@ -137,10 +141,11 @@ function findAllChaptersAndSubtitles(req) {
   for (let entry of db.entries) {
     if (
       (keys.includes("show-subs") && paramObject["show-subs"] === "true") ||
-      (keys.includes("search-subs") && paramObject["search-subs"]=== "true")
+      (keys.includes("search-subs") && paramObject["search-subs"] === "true")
     ) {
       all.push({
         id: entry.id,
+        title: entry.title,
         upload_date: entry.upload_date,
         chapters: entry.chapters,
         subtitles: entry.subtitles,
@@ -156,6 +161,7 @@ function findAllChaptersAndSubtitles(req) {
       }
       all.push({
         id: entry.id,
+        title: entry.title,
         upload_date: entry.upload_date,
         chapters: chapters_arr,
         subtitles: entry.subtitles,
@@ -170,6 +176,7 @@ function findAllChaptersAndSubtitles(req) {
       if (answer.chapters.length !== 0 || answer.subtitles.length !== 0) {
         relevant_chaps_subs.push({
           id: entry.id,
+          title: entry.title,
           upload_date: entry.upload_date,
           chapters: answer.chapters,
           subtitles: answer.subtitles,

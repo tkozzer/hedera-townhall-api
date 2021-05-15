@@ -27,6 +27,7 @@ function findByDate(req) {
               ? getRelevantChapters(entry, paramObj)
               : {
                   id: entry.id,
+                  title: entry.title,
                   upload_date: entry.upload_date,
                   chapters: entry.chapters,
                 };
@@ -36,6 +37,7 @@ function findByDate(req) {
               ? getRelevantSubtitles(entry, paramObj)
               : {
                   id: entry.id,
+                  title: entry.title,
                   upload_date: entry.upload_date,
                   subtitles: entry.subtitles,
                 };
@@ -45,6 +47,7 @@ function findByDate(req) {
               ? getRelevantChapsAndSubs(entry, paramObj)
               : {
                   id: entry.id,
+                  title: entry.title,
                   upload_date: entry.upload_date,
                   chapters: entry.chapters,
                   subtitles: entry.subtitles,
