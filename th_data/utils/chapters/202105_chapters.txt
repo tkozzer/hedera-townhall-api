@@ -1,0 +1,32 @@
+00:00 - Welcome
+01:59 - Intro/Town hall format
+04:22 - Will Hashgraph revolutionize the internet or merely improve it?
+07:00 - Will we see a US Dollar CBDC on Hedera?
+10:20 - Has Hedera solved the "blockchain trilemma"?
+12:17 - How do you use "hbar" in writing?
+13:27 - Is there a Trust and Safety team to delete file service files?
+15:13 - If a council member leaves, what happens to their node?
+16:04 - How are Distributed Identity Projects going now that Paul Madsen has left?
+18:21 - Can there be micropayments smaller than the transaction cost?
+20:32 - What does an active node look like?
+21:33 - What are some limitations/bottlenecks of Hedera nodes?
+25:03 - Can council members re-join any time after their term is complete?
+26:51 - Would a CBDC on Hedera require transaction fees paid in hbar?
+29:35 - How does Hedera prevent insider trading?
+30:54 - Can blockchain compete with Hashgraph?
+33:32 - Are NFTs and DeFi coming to Hedera?
+35:46 - Why are Hedera's services opensource? Is that a risk?
+38:22 - Is Hedera a "layer 0" solution?
+41:17 - Is a deflationary token possible in HCS or HTS?
+42:44 - Why doesn't Hedera offer it own smart contract language?
+44:01 - Could Non-Profit Organizations be council members?
+44:54 - Will Hedera interoperate with other blockchains/ledgers?
+46:42 - What is Hedera's involvement in the InterWork Alliance?
+47:42 - Can Hedera be used to store immutable data?
+50:26 - How does Hedera release news?
+52:17 - Any chance of a bridge to The Graph?
+52:58 - Could Hedera have a Saudi Arabian council member?
+53:43 - Is the task of filling council seats going according to plan?
+54:39 - What is the origin of the name Leemon?
+55:46 - Is Hedera centralized or decentralized?
+59:31 - An update on the Turbo Encabulation Algorithm.
