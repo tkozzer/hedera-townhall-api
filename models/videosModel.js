@@ -36,6 +36,7 @@ function findAll(obj) {
 
 function findAllChapters(req) {
   let paramObject = querystring.parse(extractParams(req));
+  console.log(paramObject["query"].length);
   let keys = Object.keys(paramObject);
 
   // Get all chapters from the db.entries. Will filter our subtitles under chapters if 'show_subtitles' is true
@@ -69,7 +70,7 @@ function findAllChapters(req) {
     }
   }
   // This will see if their is a relevant query for the data and return any if it exists.
-  if (keys.includes("query")) {
+  if (keys.includes("query") && paramObject["query"].length > 0) {
     let relevant_chapters = new Array();
     for (let entry of all_chapters) {
       var answer = getRelevantChapters(entry, paramObject);
