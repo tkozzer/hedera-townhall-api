@@ -36,7 +36,6 @@ function findAll(obj) {
 
 function findAllChapters(req) {
   let paramObject = querystring.parse(extractParams(req));
-  console.log(paramObject["query"].length);
   let keys = Object.keys(paramObject);
 
   // Get all chapters from the db.entries. Will filter our subtitles under chapters if 'show_subtitles' is true
