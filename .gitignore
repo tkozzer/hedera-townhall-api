@@ -120,6 +120,9 @@ temp/
 
 # Python environment
 th_data/th_data_env
+th_data/utils/chapters/__pycache__
+th_data/utils/__pycache__
+th_data/__pycache__
 
 # Markdown config
 .markdownlint.json
