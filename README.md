@@ -2,8 +2,6 @@
 
 A RESTful API to retrieve and search through Hedera Community Town Hall video's information including the questions (or chapters) and transcripts.
 
-If you would like to test out the current API, you find the [here](http://api.hashgrapharchive.org).
-
 ## Prerequisites
 
 - Node.js
